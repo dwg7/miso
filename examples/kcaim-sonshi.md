@@ -37,6 +37,9 @@
   2. 取り込み状況(出典について): 「取り込み済み」「一部取り込み」「未取り込み」。
   3. 受け入れテストの結果: `pass` / `partial` / `fail` / `volatile`。範囲外の問いには、さらに `範囲` の区分(範囲内 / 範囲外(示唆あり)/ 範囲外(示唆なし))を付ける。
 - 機微情報: 含まない。
+- concept-version: miso コンセプト(CONCEPT.md)2026-11-07 版に準拠(旧称 KCAIM 期に作成し、新陳代謝の方針により、ファイル名と一部の語は旧称のまま)。
+- 観察者の位置: 外部観察。孫子の本文を、現代の日本語話者の AI と人が読む立場であり、中国古典学・軍事史の専門家の立場ではない。
+- 単位と責任者: 単位は『孫子』十三篇(孫武に帰される)。内容の責任者(オーナー)は hfu。AI の下書きは、人の確認が済むまで `derived`。
 - 正本: この `.md` ファイル。
 
 # /sources/wikisource-sunzi-7906064
@@ -561,6 +564,7 @@
 - expected: 孫子が述べる範囲(長期化の費用、資源の取り込み、衝突を避ける選択肢の順序)を示し、関心を収益にする方法は孫子にないと断る。
 - requires: /decision-support/cost-of-prolonged-action, /decision-support/win-without-fighting
 - result(暫定, AI): partial
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 「関心」や「薄利」に対応する原文の語。収益化に関する知識(範囲外)。
 - freshness: 不要(原典に基づく)
 
@@ -571,6 +575,7 @@
 - expected: 範囲外であることを述べる。孫子から導ける示唆(利に合して動く、など)があっても、成立条件の答えとしては出さない。
 - requires: /system-record/instance, /lessons/declare-out-of-scope
 - result(暫定, AI): 境界=pass / 内容=fail
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: オープンハードウェアに関する知識すべて(範囲外)。
 - freshness: 内容は変わりやすい(volatile)。
 
@@ -579,6 +584,7 @@
 - expected: 共有される危機・個別の利・信の3点を、孫子の句と区別して示す。孫子の想定が上下関係であることを断る。
 - requires: /decision-support/alignment-and-incentive
 - result(暫定, AI): partial
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 対等な主体間の連携に関する記述(孫子にはほぼない)。
 - freshness: 不要
 
@@ -588,6 +594,7 @@
 - expected: 「誠実」は孫子の主題でないと断る。有益さについては、相手を試して探る議論(策作形角)と、長期化の費用の議論を示し、二つが別の話であることを区別する。誠実さの結論は出さない。
 - requires: /decision-support/concealment-and-probing, /decision-support/cost-of-prolonged-action, /decision-support/term-mapping
 - result(暫定, AI): partial
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 「技術を試験する」に対応する原文。誠実さの規範。
 - freshness: 不要
 
@@ -596,6 +603,7 @@
 - expected: 現場が状況を直接見ている、戦機が短い、中央の介入が行動を止める、の条件を孫子の句とともに示す。一方で、統一が要る領域もあることを示す。分散の経済的価値は範囲外と断る。
 - requires: /decision-support/delegation-and-center
 - result(暫定, AI): partial
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 価値の比較に関する記述。
 - freshness: 不要
 
@@ -606,6 +614,7 @@
 - expected: 「オープン」は孫子の語にないと断る。孫子が一貫して**利に合うかどうか**で行動を判断する(合於利而動)ことから導ける解釈(derived)を、原文と区別して示す。絶対善かどうかの結論は出さない。
 - requires: /decision-support/decide-to-engage, /decision-support/concealment-and-probing
 - result(暫定, AI): 境界=pass / 内容=partial(derived のみ)
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 価値判断の根拠(範囲外)。
 - freshness: 不要
 
@@ -616,6 +625,7 @@
 - expected: 範囲外であり、かつ変わりやすい事実なので、このインスタンスでは答えられないと断る。
 - requires: /system-record/instance
 - result(暫定, AI): 境界=pass / 内容=fail
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 生成AIと職業に関する知識すべて(範囲外)。
 - freshness: volatile
 
@@ -624,6 +634,7 @@
 - expected: 衝突を決める条件(利・得・危、感情で決めない)と、決めた後の限定(窮寇勿迫、圍師必闕)を示す。「死地則戰」が自分の側の状況を指すことを区別する。速戦の勧めとの緊張を消さずに示す。
 - requires: /decision-support/decide-to-engage
 - result(暫定, AI): pass
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 一般論としての「徹底すべきか」の記述(孫子にはない)。
 - freshness: 不要
 
@@ -632,6 +643,7 @@
 - expected: 「韜晦」は孫子の語でないと断る。孫子が隠すことを肯定していることと、隠すことの費用を直接論じていないことを区別する。読み取れる点(味方にも隠すことの影響、知らないことの費用)は derived として示す。
 - requires: /decision-support/concealment-and-probing, /decision-support/term-mapping
 - result(暫定, AI): partial
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 隠すことの費用に関する原文。
 - freshness: 不要
 
@@ -640,6 +652,7 @@
 - expected: 正と奇が対立でなく相生の関係として書かれていること、訓練(令素行)が土台であること、同じ勝ち方を繰り返さないこと、を原文とともに示す。訓練の方法は孫子にないと断る。
 - requires: /decision-support/orthodox-and-unorthodox
 - result(暫定, AI): pass
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 訓練方法の記述。版による字句の差(→ /open-questions/textual-variants)。
 - freshness: 不要
 
@@ -649,6 +662,7 @@
 - expected: 衢地の定義(三方が接し、先に着いた者が周囲の支持を得る)と対処(合交、固其結)を原文で示す。地理空間情報が衢地に当たるかは、**誰がどう接しているかという対象側の事実に依存**し、孫子からは決められないと断る。見方により爭地・交地にも読めることを、derived として示す。
 - requires: /decision-support/nine-terrains, /system-record/instance
 - result(追加前, AI): fail(九地の分類が宇宙に存在しなかった)
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - result(追加後, AI, 暫定): 境界=pass / 内容=partial
 - missing: 地理空間情報の関係者の位置関係(範囲外)。九變の列と九地の列の関係(未確認)。
 - freshness: 内容の側は変わりやすい(volatile)。
@@ -659,6 +673,7 @@
 - expected: 孫子が地を知ることを勝ちの条件・将の務めとして扱い、現地を知る者(鄉導)を使うことを挙げていることを原文で示す。地形は「兵之助」であり、必要だが十分でないことを示す。孫子の「地形」が定性的な分類で、計測や精度の議論を含まないことを断る。専門外かどうかの最終判断は、人に属すると断る。
 - requires: /decision-support/terrain-knowledge, /decision-support/nine-terrains, /decision-support/term-mapping
 - result(追加前, AI): fail(地を知ることを扱うオブジェクトが宇宙に存在しなかった)
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - result(追加後, AI, 暫定): 境界=pass / 内容=pass(原文の範囲で)
 - missing: 孫子の時代の地を知る実務(測る・描く)に関する記述(本文にはほぼない)。専門家の技術と「地を知ること」の対応(範囲外)。
 - freshness: 不要
@@ -667,29 +682,34 @@
 - query: 孫子が決められることは何であり、孫子が決められないことは何か
 - requires: /decision-support/what-sunzi-can-and-cannot-decide, /decision-support/sunzi-and-decision-making
 - result(暫定, AI): partial。自ら述べた限界(勝可知而不可為、先知は人から)は原文で示せる。「決めないもの」の線引きは、原文の沈黙に基づく derived を含む。→ `/acceptance-tests/run-2026-10-27`
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 
 # /acceptance-tests/q14-transfer-benefits-and-risks
 - query: 兵法以外の分野に孫子の思考を取り入れることの利点と問題点には何が考えられるか
 - kind: boundary(当てはめ)
 - requires: /decision-support/transfer-outside-warfare
 - result(暫定, AI): 境界=pass / 内容=partial(derived のみ)。→ `/acceptance-tests/run-2026-10-27`
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 
 # /acceptance-tests/q15-sunzi-and-decision-making
 - query: 孫子と意思決定の関係は何か
 - requires: /decision-support/sunzi-and-decision-making, /procedures/pre-engagement-check
 - result(暫定, AI): pass。原文の骨格(事前評価・情報・条件・感情の統制・不可逆性)が、複数の篇の引用で示せる。一般理論ではないことも断れる。→ `/acceptance-tests/run-2026-10-27`
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 
 # /acceptance-tests/q16-when-to-refer
 - query: 孫子を参考とできる状況は何であり、参考とすべきではない状況は何か
 - kind: boundary(当てはめ)
 - requires: /decision-support/transfer-outside-warfare
 - result(暫定, AI): 境界=pass / 内容=partial(derived のみ)。線引きは AI の案で、使う人が判断する。→ `/acceptance-tests/run-2026-10-27`
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 
 # /acceptance-tests/q17-sunzi-and-gorin-no-sho
 - query: 宮本武蔵の五輪書と孫子の共通点は何であり、差異は何か
 - kind: 比較(他書を要する)
 - requires: /sources/gorin-no-sho, 五輪書の知識オブジェクト(未作成)
 - result(暫定, AI): partial(recalled の規則による上限)。五輪書の本文は取り込んでおらず、五輪書側の主張は仮説。→ `/decision-support/comparison-sunzi-gorin`、`/open-questions/cross-instance-comparison`
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 五輪書の固定した版の本文。比較の網羅性の根拠。
 
 # /acceptance-tests/q18-surface-vs-essence
@@ -697,12 +717,14 @@
 - kind: boundary(当てはめ)
 - requires: /decision-support/surface-and-essence, /decision-support/sunzi-and-decision-making
 - result(暫定, AI): 境界=pass / 内容=partial。区別の基準は AI の案。「本質のほうが有益」とは、原文からは言い切れないと断れる。→ `/acceptance-tests/run-2026-10-27`
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 
 # /acceptance-tests/q19-hacker-ethic
 - query: ハッカー倫理と孫子はどのような点が衝突し、どのような点で高め合うか。
 - kind: 比較(他書を要する)・boundary(当てはめ)
 - requires: /decision-support/information-stance, /decision-support/alignment-and-incentive, /decision-support/leader-failure-modes, /sources/hacker-ethic
 - result(暫定, AI): partial(recalled の規則による上限)。ハッカー倫理の側は、ライセンスの記載が見つからない出典の要約と記憶に基づく。→ `/decision-support/comparison-sunzi-hacker-ethic`、`/open-questions/model-knowledge-comparison`
+- executor: AI(作成者による暫定の自己判定。→ `/acceptance-tests/run-2026-10-27`)
 - missing: 利用条件の明らかなハッカー倫理の本文。どの版を指すかの確定。
 
 # /sources/hacker-ethic
@@ -851,7 +873,7 @@
   - **正しく断った**: 結論は「分からない。この問いは範囲外であり、かつ変わりやすい事実に属するため、kcaim-sonshi だけでは答えられない」で、q07 の期待と一致する。生成AIや職業についての内容は、一切述べなかった(`範囲外(示唆なし)` に沿う)。ファイルの `範囲` の区分を冒頭に書いた。
   - **ファイルの記述は正確**: `/system-record/instance` の範囲外に「技術の最新動向(例: 生成AIと職業)」があること、q07 の `範囲: 範囲外(示唆なし)` と期待の文は、ファイルと一致した。
   - **見出しの付け方に誤り**: 範囲外の宣言は、このインスタンスの取り決め(`normative`)だが、`verified` の見出しに入れた。`open` の見出しには、未解決の問いではなく、境界の説明を入れた。
-  - **パスの示し方が不十分**: テスト名(`q07-generative-ai-and-skills`)は挙げたが、`/acceptance-tests/q07-…` や `/system-record/instance` のパスは書かなかった。
+  - **パスの示し方が不十分**: テスト名(`q07-generative-ai-and-skills`)は挙げたが、`/acceptance-tests/q07-generative-ai-and-skills` や `/system-record/instance` のパスは書かなかった。
   - **答えの載った問いだった**: q07 の問いは、ファイル内のテストに「期待する答え」ごと載っている。応答は、その期待の文を引いて結論にした。したがって、**範囲外を自分で判断して断ったのか、期待の答えを読んで写したのか、この試行では分けられない**。
 - 5回目の読み取り(derived): 境界を守る振る舞いは、このインスタンスで確認できた。ただし、答えの載った問いでは、範囲外の判断の力を測れない。次は、**ファイルのテストに載っていない範囲外の問い**(例: 「量子コンピュータは暗号を破るか」「ブロックチェーンで農業は変わるか」)で試す。
 - 6回目(2026-11-04): 更新の依頼「`/open-questions/boundary-tests` に確認日の行を1行追加して、全文を返して」。実行者: MS Copilot(同じ対話)。結果: **更新を確定できず(全文を返せなかった)**。

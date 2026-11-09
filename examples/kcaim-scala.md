@@ -1,4 +1,6 @@
-# KCAIM-Scala
+# /system-record/title
+
+KCAIM-Scala(題。旧称 KCAIM 期の作成で、名称は新陳代謝の方針により当面そのまま)
 
 > Scala 3 を通してプログラミングと計算機科学を学ぶための KCAIM。
 >
@@ -27,6 +29,14 @@ Scala を学ぶことを通じて、
 - 関数型プログラミング
 
 を理解することを支援する。
+
+## 準拠の補記(2026-11-10、miso 準拠化の際に形式のみ補った。内容は作成者のもの)
+
+- concept-version: miso コンセプト(CONCEPT.md)2026-11-07 版の形式に合わせた。
+- 範囲外: Scala 言語仕様の再録(冒頭に明記)。および、このインスタンスに取り込んでいない事項(`/inventory/backlog` の項目)。範囲外・未取り込みの問いには、そう答える。
+- 観察者の位置: 外部観察。Scala 処理系の実装者の立場ではなく、学習者を支援する立場で書かれている。
+- 単位と責任者: 単位は Scala 3 の学習用の概念群。内容の責任者(オーナー)は作成者(未記載。要確認)。
+- 状態の補記: `/traces/` の各オブジェクトは、作成者の記録を AI が整理した `derived` として扱う。受け入れテストの `query` と実行者は、作成時に記録されていない。
 
 ---
 
@@ -178,6 +188,8 @@ Scala理解のための背景概念。
 
 # /traces/history-001-two-traditions
 
+- status: derived
+
 - observation:
 
   Scala は
@@ -198,6 +210,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/history-002-pattern-matching-lineage
+
+- status: derived
 
 - observation:
 
@@ -220,6 +234,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/history-003-option-lineage
+
+- status: derived
 
 - observation:
 
@@ -274,6 +290,8 @@ Scala理解のための背景概念。
 
 # /traces/spec-reading-001-values
 
+- status: derived
+
 - observation:
 
   Scalaでは val が中心である。
@@ -287,6 +305,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/spec-reading-002-expression
+
+- status: derived
 
 - observation:
 
@@ -303,6 +323,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/spec-reading-003-transformation
+
+- status: derived
 
 - observation:
 
@@ -322,6 +344,8 @@ Scala理解のための背景概念。
 
 # /traces/spec-reading-004-value-vs-variable
 
+- status: derived
+
 - observation:
 
   val が標準である。
@@ -331,6 +355,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/spec-reading-005-expression-orientation
+
+- status: derived
 
 - observation:
 
@@ -346,6 +372,8 @@ Scala理解のための背景概念。
 
 # /traces/spec-reading-006-type-inference
 
+- status: derived
+
 - observation:
 
   Scalaは型推論を持つ。
@@ -359,6 +387,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/spec-reading-007-option-as-type
+
+- status: derived
 
 - observation:
 
@@ -376,6 +406,8 @@ Scala理解のための背景概念。
 
 # /traces/spec-reading-008-option-vs-null
 
+- status: derived
+
 - observation:
 
   Option は
@@ -387,6 +419,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/spec-reading-009-option-and-collection-thinking
+
+- status: derived
 
 - observation:
 
@@ -409,6 +443,8 @@ Scala理解のための背景概念。
 
 # /traces/spec-reading-010-option-and-pattern-matching
 
+- status: derived
+
 - observation:
 
   Option は
@@ -418,6 +454,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/spec-reading-011-pattern-matching-is-not-switch
+
+- status: derived
 
 - observation:
 
@@ -433,6 +471,8 @@ Scala理解のための背景概念。
 
 # /traces/spec-reading-012-pattern-matching-as-deconstruction
 
+- status: derived
+
 - observation:
 
   case Some(x)
@@ -444,6 +484,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/spec-reading-013-option-requires-pattern-matching
+
+- status: derived
 
 - observation:
 
@@ -460,6 +502,8 @@ Scala理解のための背景概念。
 ---
 
 # /traces/spec-reading-014-match-is-expression
+
+- status: derived
 
 - observation:
 
@@ -611,6 +655,8 @@ Scalaは
 
 # /traces/scaladoc-discovery-001
 
+- status: derived
+
 - observation:
 
   実務では
@@ -623,6 +669,8 @@ Scalaは
 ---
 
 # /traces/intellij-discovery-001
+
+- status: derived
 
 - observation:
 
@@ -643,12 +691,18 @@ Scalaは
 
 # /acceptance-tests/option-purpose
 
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
+
 - result:
   pass
 
 ---
 
 # /acceptance-tests/option-vs-null
+
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
 
 - result:
   pass
@@ -657,12 +711,18 @@ Scalaは
 
 # /acceptance-tests/option-map
 
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
+
 - result:
   pass
 
 ---
 
 # /acceptance-tests/option-pattern-match
+
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
 
 - result:
   pass
@@ -671,12 +731,18 @@ Scalaは
 
 # /acceptance-tests/option-philosophy
 
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
+
 - result:
   pass
 
 ---
 
 # /acceptance-tests/pattern-matching-purpose
+
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
 
 - result:
   pass
@@ -685,12 +751,18 @@ Scalaは
 
 # /acceptance-tests/match-as-expression
 
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
+
 - result:
   pass
 
 ---
 
 # /acceptance-tests/decomposition
+
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
 
 - result:
   partial
@@ -703,6 +775,9 @@ Scalaは
 
 # /acceptance-tests/documentation-navigation
 
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
+
 - result:
   fail
 
@@ -713,6 +788,9 @@ Scalaは
 ---
 
 # /acceptance-tests/ide-literacy
+
+- query: (未記録。作成時に記録されていない)
+- executor: 不明(未記録)
 
 - result:
   fail
@@ -777,4 +855,7 @@ Scala仕様を
 
 # /sources/current-conversation
 
-取り込み済み。
+取り込み状況: 取り込み済み。
+
+取得: 日付は未記録。
+
